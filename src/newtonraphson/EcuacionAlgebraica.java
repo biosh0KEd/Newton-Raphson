@@ -14,14 +14,14 @@ public class EcuacionAlgebraica {
     public int numeroDeTerminos;
     public EcuacionAlgebraica(String ecu){
         int nter = 0;
-        for(int z = 0; z == (ecu.length() - 1); z++){
+        for(int z = 0; z < ecu.length(); z++){
             if (ecu.charAt(z) == 'x') {
                 nter++;
             }
         }
         this.numeroDeTerminos = nter;
         this.terminos = new double [this.numeroDeTerminos][2];
-        for(int x = 0; x == (ecu.length() - 1); x++) {
+        for(int x = 0; x < ecu.length(); x++) {
            if (ecu.charAt(x) == 'x') {
                int y = 0;
                for(int a = x; a == 0 || ecu.charAt(a) == 'x'; a--) {
@@ -39,4 +39,6 @@ public class EcuacionAlgebraica {
     public double[][] getTerminos() {
         return this.terminos;
     }
+    
+    /*Cambiar charAt para ingresar ints evaluar cada char*/
 }

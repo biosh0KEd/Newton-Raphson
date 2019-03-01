@@ -24,7 +24,7 @@ public class NewtonRaphson {
         String ecu = entradaDatos.next();
         EcuacionAlgebraica ecuacion;
         ecuacion = new EcuacionAlgebraica(ecu);
-        for(int x = 0; x == ecuacion.numeroDeTerminos; x++){
+        for(int x = 0; x < ecuacion.numeroDeTerminos; x++){
             System.out.println(ecuacion.terminos[x][0]);
             System.out.println(ecuacion.terminos[x][1]);
         }
