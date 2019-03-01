@@ -5,6 +5,8 @@
  */
 package newtonraphson;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Efraín
@@ -15,7 +17,14 @@ public class NewtonRaphson {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Scanner Entrada;
+        Entrada = new Scanner(System.in);
+        System.out.println("Algoritmo Newton-Raphson");
+        System.out.println("Ingresa el numero de terminos de tu ecuacion:");
+        EcuacionAlgebraica Ecuacion;
+        Ecuacion = new EcuacionAlgebraica(Entrada.nextInt());
+        
+        
     }
     
 }
