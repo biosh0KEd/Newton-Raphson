@@ -28,4 +28,15 @@ public class EcuacionAlgebraica {
             terminoDerivado[x][1] = this.termino[x][1] - 1;
         }
     }
+    public double newtonRaphson(int PP, int error) {
+        double fx = 0;
+        double x2 = 0;
+        for (int x = 0; x < this.numeroDeTerminos; x++){
+            double fx1 = fx;
+            for (int a = 0; a < this.termino[x][1]; a++) {
+                x2 = PP * PP;
+            }
+            fx = this.termino[x][0] * PP * x2;
+        }
+    }
 }
