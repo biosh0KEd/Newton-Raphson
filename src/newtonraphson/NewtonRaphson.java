@@ -31,6 +31,7 @@ public class NewtonRaphson {
             System.out.println("Ingresa el exponente del termino");
             double exp = Entrada.nextDouble();
             Ecuacion.ingresarDatos(x, coe, exp);
+            
         }
     }
     
