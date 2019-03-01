@@ -10,5 +10,14 @@ package newtonraphson;
  * @author Efraín
  */
 public class EcuacionAlgebraica {
-    
+    private final int numeroDeTerminos;
+    private final double[][] termino;
+    public EcuacionAlgebraica(int term) {
+        this.numeroDeTerminos = term;
+        termino = new double[term][2];
+    }
+    public void ingresarDatos(int term, double coeficiente, double exponente) {
+        this.termino[term][0] = coeficiente;
+        this.termino[term][1] = exponente;
+    }
 }

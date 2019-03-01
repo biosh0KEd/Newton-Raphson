@@ -21,10 +21,17 @@ public class NewtonRaphson {
         Entrada = new Scanner(System.in);
         System.out.println("Algoritmo Newton-Raphson");
         System.out.println("Ingresa el numero de terminos de tu ecuacion:");
+        int numDatos = Entrada.nextInt();
         EcuacionAlgebraica Ecuacion;
-        Ecuacion = new EcuacionAlgebraica(Entrada.nextInt());
-        
-        
+        Ecuacion = new EcuacionAlgebraica(numDatos);
+        for (int x = 0; x < numDatos; x++){
+            System.out.println("Ingresa el  termino " + (x + 1));
+            System.out.println("Ingresa el coeficiente del termino");
+            double coe = Entrada.nextDouble();
+            System.out.println("Ingresa el exponente del termino");
+            double exp = Entrada.nextDouble();
+            Ecuacion.ingresarDatos(x, coe, exp);
+        }
     }
     
 }
