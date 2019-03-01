@@ -12,12 +12,16 @@ package newtonraphson;
 public class EcuacionAlgebraica {
     private final int numeroDeTerminos;
     private final double[][] termino;
+    private final boolean[]  signoTermino;
     public EcuacionAlgebraica(int term) {
         this.numeroDeTerminos = term;
-        termino = new double[term][2];
+        termino = new double[term][3];
+        signoTermino = new boolean[term];
     }
-    public void ingresarDatos(int term, double coeficiente, double exponente) {
-        this.termino[term][0] = coeficiente;
-        this.termino[term][1] = exponente;
+    public void ingresarDatos(int term, boolean signo, double coeficiente, double exponente) {
+        this.signoTermino[term][0] = signo;
+        this.termino[term][1] = coeficiente;
+        this.termino[term][2] = exponente;
     }
+    
 }
